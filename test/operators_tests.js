@@ -9,14 +9,15 @@ describe("Operators module:", function () {
 	  assert.equal(Operators.getConstValue("pi"), 3.14159265359);
 	});
 	
-	it('Верно ли определяются скобки', () => {
+	it('Верно ли определяются скобки (positive - ()[]{})', () => {
 		assert(Operators.isBracket("("));
 		assert(Operators.isBracket(")"));
 		assert(Operators.isBracket("["));
 		assert(Operators.isBracket("]"));
 		assert(Operators.isBracket("{"));
 		assert(Operators.isBracket("}"));
-		
+	});
+	it('Верно ли определяются скобки (negative - 0,f)', () => {
 		assert.equal(Operators.isBracket("0"), false);
 		assert.equal(Operators.isBracket("f"), false);
 	});
