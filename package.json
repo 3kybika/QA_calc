@@ -1,0 +1,17 @@
+{
+  "name": " technopark-calc-unit-testing",
+  "version": "1.0.0",
+  "description": "Unit testing with example calculator.",
+  "main": "index.js",
+  "scripts": {
+	"start": "node index.js",
+    "test": "nyc mocha"
+  },
+  "author": "3kybika",
+  "license": "ISC",
+  
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0"
+  }
+}
