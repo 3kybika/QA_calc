@@ -9,15 +9,14 @@ describe("Operators module:", function () {
 	  assert.equal(Operators.getConstValue("pi"), 3.14159265359);
 	});
 	
-	it('Верно ли определяются скобки (positive - ()[]{})', () => {
+	it('Верно ли определяются скобки', () => {
 		assert(Operators.isBracket("("));
 		assert(Operators.isBracket(")"));
 		assert(Operators.isBracket("["));
 		assert(Operators.isBracket("]"));
 		assert(Operators.isBracket("{"));
 		assert(Operators.isBracket("}"));
-	});
-	it('Верно ли определяются скобки (negative - 0,f)', () => {
+		
 		assert.equal(Operators.isBracket("0"), false);
 		assert.equal(Operators.isBracket("f"), false);
 	});
@@ -131,6 +130,9 @@ describe("Operators module:", function () {
 	it('Верно ли вычисляются функции (унарные операторы) ', () => {
 		assert.equal(Operators.calculateFunction("sin",2), 0.9092974268256817);
 		assert.equal(Operators.calculateFunction("exp",0), 1);
+		assert.equal(Operators.calculateFunction("cos",0), 1);
+		assert.equal(Operators.calculateFunction("tg",3), -0.1425465430742778);
+		assert.equal(Operators.calculateFunction("ctg",0), Infinity);
 		assert.equal(Operators.calculateFunction("ln",2), 0.6931471805599453);
 		assert.equal(Operators.calculateFunction("sqrt",4), 2);
 		

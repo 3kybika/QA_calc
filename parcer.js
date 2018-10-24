@@ -8,8 +8,6 @@ const OPERAND_TYPES = {
 	"CONST":5
 }
 
-
-
 class Operand {
 	constructor(oper, type) {
 		this.oper = oper;
@@ -180,16 +178,15 @@ const calculateParceredFormula = function(formula){
 	throw "formula is uncorrect!";
 }
 
-const printOperands = function(operands){
+/*const printOperands = function(operands){
 	for(let i = 0; i < operands.length; i++) {
 		console.log(`(${operands[i].getType()}) = ${operands[i].getOperand()}`);
 	}
-}
+}*/
 
 const calculate = function(formula){
 	formula = parce(formula);
-
-
+	if(formula.length == 0) return 0;
 	return calculateParceredFormula(formula);
 }
 

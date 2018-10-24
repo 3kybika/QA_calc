@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
 	"start": "node index.js",
-    "test": "nyc mocha"
+    "test": "nyc --reporter=html mocha",
+	"test-with-coverage": "nyc --reporter=text mocha"
   },
   "author": "3kybika",
   "license": "ISC",

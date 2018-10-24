@@ -80,15 +80,7 @@ const OPERATORS_REALISATION = [
 		return result;
 	}
 ];
-	
 
-const pow = function(x,y) { 
-    result = 1;
-    for (i = 1; i <= y; i++) {
-        result = result * x;
-    }
-    return result;
-};
 
 const calculate = function(operation, x,y){
 	let oper = OPERATORS.indexOf(operation);
@@ -103,8 +95,8 @@ const FUNCTIONS = ["sin", "cos", "tg", "ctg", "exp", "ln", "sqrt"];
 const FUNCTIONS_REALISATION = [
 	(x)=>{return Math.sin(x);},
 	(x)=>{return Math.cos(x);},
-	(x)=>{return Math.tg(x);},
-	(x)=>{return Math.ctg(x);},
+	(x)=>{return Math.tan(x);},
+	(x)=>{return 1/Math.tan(x);},
 	(x)=>{return Math.exp(x);},
 	(x)=>{return Math.log(x);},
 	(x)=>{if (x <0) throw "root number less than 0"; return Math.sqrt(x);}
